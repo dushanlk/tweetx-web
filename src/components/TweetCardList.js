@@ -5,7 +5,7 @@ import {RECEIVE_ERROR, RECEIVE_TWEETS, REQUEST_TWEETS,} from "../actions/fetchTw
 import LinearProgress from '@material-ui/core/LinearProgress';
 import Typography from "@material-ui/core/Typography";
 
-const TweetCardList = ({tweets, status}) => (
+const TweetCardList = ({tweets, status, message}) => (
     <Grid container style={{marginTop: 30}}>
         <Grid item xs={3}>
         </Grid>
@@ -25,8 +25,8 @@ const TweetCardList = ({tweets, status}) => (
             }
             {
                 status === RECEIVE_ERROR ?
-                    <Typography variant="h5" gutterBottom align={'center'} style={{marginTop: 50, color: "red"}}>
-                        Error occurred while collecting Tweets!
+                    <Typography variant="h5" gutterBottom align={'center'} style={{marginTop: 50}}>
+                        {message}
                     </Typography> : ""
 
             }

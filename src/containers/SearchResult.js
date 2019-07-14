@@ -5,7 +5,8 @@ import TweetCardList from "../components/TweetCardList";
 
 const mapStatesToProps = state => ({
     tweets: state.tweets,
-    status: state.tweetsFetchStatus
+    status: state.tweetsFetchStatus,
+    message: state.message
 })
 
 export default connect(

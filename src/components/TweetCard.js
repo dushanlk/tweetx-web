@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import Avatar from '@material-ui/core/Avatar';
 import Grid from "@material-ui/core/Grid";
 import {Box} from "@material-ui/core";
+import Linkify from 'react-linkify';
 
 const TweetCard = ({tweet, user, time, image}) => (
     <Paper style={{marginTop: 15, padding: 20}}>
@@ -23,7 +24,7 @@ const TweetCard = ({tweet, user, time, image}) => (
             </Grid>
             <Grid item xs={12} style={{marginTop: 20}}>
                 <Typography variant="body1" gutterBottom align={'justify'}>
-                    {tweet}
+                    <Linkify>{tweet}</Linkify>
                 </Typography>
             </Grid>
         </Grid>

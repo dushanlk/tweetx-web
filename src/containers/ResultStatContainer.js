@@ -6,7 +6,7 @@ import ResultStats from "../components/ResultStats";
 const mapStatesToProps = state => ({
     numOfTweets: state.tweets.length,
     hashTags: state.hashTags,
-    status: state.tweetsFetchStatus
+    type: state.tweetsFetchStatus
 })
 
 export default connect(
